@@ -70,29 +70,6 @@ Then, in each project, run `/setup-levin-skills` once. It writes the GitHub issu
 - **[git-guardrails-claude-code](./skills/productivity/git-guardrails-claude-code/SKILL.md)**: Set up Claude Code hooks that block dangerous git commands (push, reset --hard, clean, etc.) before they run.
 - **[writing-for-agents](./skills/productivity/writing-for-agents/SKILL.md)**: Writing documents for agents: skills, AGENTS.md/CLAUDE.md, and any doc an agent reaches by a pointer.
 
-## Changing skills
-
-Edit the `SKILL.md` directly. To add a new skill, put it in `skills/engineering/` or `skills/productivity/`, then list it in that bucket's `README.md`, in this README, and in `.claude-plugin/plugin.json`. `/writing-for-agents` knows how a good skill is written, and `CLAUDE.md` has the repo rules the agent follows.
-
-## Taking over updates from Matt
-
-Don't `git merge` upstream: I rename and rewrite skills, so a merge produces conflicts everywhere. Instead:
-
-```bash
-scripts/upstream-changes.sh                # what changed since my last sync
-scripts/upstream-changes.sh <file>         # upstream diff for one file
-scripts/upstream-changes.sh --mark         # done reviewing, remember this point
-```
-
-Each changed file is labelled:
-
-- **untouched by you**: take it over with `git show upstream/main:<upstream-path> > <local-path>`
-- **you changed this too**: read the diff and copy over what you want by hand
-- **NEW upstream**: a new skill; copy the folder if you want it
-- **you removed this skill**: ignore
-
-Commit `.upstream-sync` after `--mark`.
-
 ## Credits
 
 Based on [mattpocock/skills](https://github.com/mattpocock/skills) by Matt Pocock, MIT licensed. The `docs/` folder holds his longer explanations of each skill.
