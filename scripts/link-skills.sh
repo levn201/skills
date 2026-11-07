@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# NOTE: This is a dev-only script, intended for use by maintainers of this repo.
-# It is not a supported installer. Modifications to it, or requests for
-# modifications, will not be approved.
+# Installs this repo's skills for local use.
 #
 # Links all skills in the repository into the local skill directories used by
 # each agent harness:
@@ -16,12 +14,7 @@ REPO="$(cd "$(dirname "$0")/.." && pwd)"
 DESTS=("$HOME/.claude/skills" "$HOME/.agents/skills")
 
 # Collect the repo's skills once, link into every destination. `deprecated/`
-# is retired, and `misc/` is kept around but rarely used and not promoted (see
-# each bucket's own README): neither belongs in a daily-driver skill
-# directory, so both are skipped here, same as everywhere else non-promoted
-# skills are kept out. `in-progress/` IS still linked: it's public on purpose,
-# feedback wanted, and this local install is exactly where that feedback loop
-# runs.
+# is retired and skipped.
 names=()
 srcs=()
 while IFS= read -r -d '' skill_md; do
