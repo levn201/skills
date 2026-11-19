@@ -55,6 +55,7 @@ Danach in jedem Projekt einmal `/setup-levin-skills` ausführen. Das schreibt di
 - **[code-review](./skills/engineering/code-review/SKILL.md)**: Review des Diffs seit einem festen Punkt entlang zweier Achsen: **Standards** (hält sich der Code an die Coding-Standards des Repos, plus eine Basis aus Fowlers Code-Smells?) und **Spec** (setzt er das ursprüngliche Issue bzw. die Spec getreu um?), ausgeführt als parallele Subagents.
 - **[pr](./skills/engineering/pr/SKILL.md)**: Die Form, die eine Pull-Request-Beschreibung haben sollte: eine Zusammenfassung als kleinstmögliche Darstellung, die die Änderung klar macht, Vorher/Nachher-Belege, dass es funktioniert, und eine Einschätzung des Merge-Risikos (Einweg- oder Zweiwegtür, plus Auswirkungsradius).
 - **[wizard](./skills/engineering/wizard/SKILL.md)**: Erzeugt einen interaktiven Bash-Wizard, der einen Menschen durch Schritte führt, die nur er selbst erledigen kann: Infrastruktur bereitstellen, Zugangsdaten oder CI-Secrets einrichten, sich durch ein unbekanntes Dashboard eines Drittanbieters klicken oder eine einmalige Migration bzw. Umstellung durchführen.
+- **[ausbilder](./skills/engineering/ausbilder/SKILL.md)**: Coacht dich wie ein Ausbilder, statt den Code selbst zu schreiben: legt das Ziel fest, erklärt Schritt für Schritt, was zu tun ist und warum, gibt gestufte Hinweise und prüft nach jedem Schritt deinen Code. Der Fortschritt wird in `AUSBILDUNG.md` gespeichert.
 
 ### Produktivität
 
